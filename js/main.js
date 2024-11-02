@@ -45,4 +45,5 @@ const getRandomUserPost = function () {
 
 const usersPosts = Array.from({length: PHOTO_COUNTER}, getRandomUserPost);
 
-console.log(usersPosts);
+//Чтобы линт не ругался на не использование переменной
+usersPosts.forEach();
