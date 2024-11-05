@@ -47,3 +47,5 @@ const usersPosts = Array.from({length: PHOTO_COUNTER}, getRandomUserPost);
 
 //Чтобы линт не ругался на не использование переменной
 usersPosts.forEach();
+usersPosts.forEach();
+
