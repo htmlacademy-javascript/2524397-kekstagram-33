@@ -59,8 +59,8 @@ const meetingIsReally = function (workStart, workEnd, meetingStart, meetingTime)
     return meetingTimeConversionResult;
   };
 
-  const ConversionResult = timeConversion(meetingTime);
-  const splitMeetingTime = ConversionResult.split(':');
+  const conversionResult = timeConversion(meetingTime);
+  const splitMeetingTime = conversionResult.split(':');
 
   const workTimeWithMeetingHours = Number(splitMeetingStart[0]) + Number(splitMeetingTime[0]);
   const workTimeWithMeetingSeconds = Number(splitMeetingStart[1]) + Number(splitMeetingTime[1]);
