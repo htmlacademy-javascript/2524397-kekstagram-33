@@ -9,6 +9,13 @@ const getUserID = function () {
 
 const getUserIDWrapper = getUserID();
 
+const getPhotoUrl = function () {
+  let currenUrl = 0;
+  return () => ++currenUrl;
+};
+
+const getPhotoUrlWrapper = getPhotoUrl();
+
 const getCommentID = function () {
   let currentID = 0;
   return () => ++currentID;
@@ -28,13 +35,13 @@ const getRandomUserComment = function () {
 const getRandomUserPost = function () {
   return {
     id: getUserIDWrapper(),
-    url: `photos/${getRandomNumber(1,25)}.jpg`,
+    url: `photos/${getPhotoUrlWrapper()}.jpg`,
     descriprion: PHOTO_DESCRIPTIONS[getRandomNumber(0, PHOTO_DESCRIPTIONS.length - 1)],
     likes: getRandomNumber(15, 200),
     comments: getRandomUserComment(),
   };
 };
 
-const createUsersPosts = () => Array.from({length: PHOTO_COUNTER}, getRandomUserPost);
+const createUsersPosts = Array.from({length: PHOTO_COUNTER}, getRandomUserPost);
 
 export {createUsersPosts};
