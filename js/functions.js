@@ -31,6 +31,7 @@ isPalindrom('топот');
 isPalindrom('ДовОд');
 isPalindrom('Кекс');
 isPalindrom('Лёша на полке клопа нашёл ');
+isPalindrom('Лёша на полке клопа нашёл ');
 
 
 // Не получилось
